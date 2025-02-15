@@ -6,7 +6,7 @@
  	by doing this script instead of using the split function
 */
 
-function lexical_split(text, delimiter=" ", quotes="\"") {
+export function lexical_split(text, delimiter=" ", quotes="\"") {
 	let regex = new RegExp(`${quotes}([^${quotes}\\]*(\\.[^${quotes}\\]*)*)${quotes}|[^${delimiter}]+`,"g");
 	return text.split(regex);
 }
